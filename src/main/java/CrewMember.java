@@ -11,10 +11,6 @@ public class CrewMember extends Person{
         return crewRank;
     }
 
-    public void setCrewRank(CrewRank crewRank) {
-        this.crewRank = crewRank;
-    }
-
     public String relayMessage(){
        return "There is NO need to PANIC!";
     }

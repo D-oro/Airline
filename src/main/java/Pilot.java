@@ -1,3 +1,4 @@
+//this could extend crewmember.
 public class Pilot extends Person{
 
    public Pilot(String name){

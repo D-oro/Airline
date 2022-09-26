@@ -12,33 +12,33 @@ public class Flight {
     private Pilot pilot;
     private String departureTime;
 
-    public Flight(Plane plane, Pilot pilot, String flightNumber, String destination, String departureAirport, String departureTime){
-        this.plane = plane;
+    public Flight(Plane plane, Pilot pilot, String flightNumber, String destination, String departureAirport, String departureTime) {
+        this.plane = plane; // could also just be an instance of a planeType.
         this.pilot = pilot;
         this.confirmedCrew = new ArrayList<CrewMember>();
         this.bookedPassengers = new ArrayList<Passenger>();
         this.flightNumber = flightNumber;
-        this.destination = destination;
-        this.departureAirport = departureAirport;
+        this.destination = destination; // this should be an enum
+        this.departureAirport = departureAirport; //this should be an enum
         this.departureTime = departureTime;
     }
 
 
-    public int passengerCount(){
+    public int passengerCount() {
         return bookedPassengers.size();
     }
 
-    public int getTotalCapacity(){
-       PlaneType planeType= plane.getPlaneType();
-       return planeType.getCapacity();
+    public int getTotalCapacity() {
+        PlaneType planeType = plane.getPlaneType();
+        return planeType.getCapacity();
     }
 
-    public int getAvailableSeats(){
+    public int getAvailableSeats() {
         return getTotalCapacity() - bookedPassengers.size();
     }
 
-    public void addPassengers(Passenger passenger){
-        if (getAvailableSeats() > 0){
+    public void addPassengers(Passenger passenger) {
+        if (getAvailableSeats() > 0) {
             bookedPassengers.add(passenger);
         }
         if (getAvailableSeats() == 0) {
@@ -47,14 +47,4 @@ public class Flight {
     }
 
 
-
-//
-//        public void addPassenger(Passenger passenger){
-//        Plane plane = plane.getPlaneType()
-//        if(plane.capacity > this.passengerCount())
-//    }
-
 }
-    //methods: return the number of available seats
-    // book a passenger(if there are remaining seats)
-

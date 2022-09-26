@@ -1,5 +1,6 @@
 //person class which will be used for passengers, cabin crew and pilot.
-public class Person {
+//this should be an abstract class, but there's no real downside from it, just that we don't want to accidentally create an instance of person.
+public abstract class Person {
     private String name;
 
     public Person(String name){

@@ -33,10 +33,5 @@ public class CrewMemberTest {
         assertEquals(CrewRank.CAPTAIN, crewMember.getCrewRank());
     }
 
-    @Test
-    public void canChangeRank(){
-        crewMember.setCrewRank(CrewRank.FIRSTOFFICER);
-        assertEquals(CrewRank.FIRSTOFFICER, crewMember.getCrewRank());
-    };
 
 }

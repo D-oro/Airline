@@ -25,6 +25,12 @@ public class FlightTest {
     }
 
     @Test
+    public void canGetCorrectNumberOfAvailableSeats(){
+        flight.addPassengers(passenger1);
+        assertEquals(2, flight.getAvailableSeats());
+    }
+
+    @Test
     public void canBookPassengersUntilFull(){
         flight.addPassengers(passenger1);
         flight.addPassengers(passenger2);
@@ -32,14 +38,6 @@ public class FlightTest {
         flight.addPassengers(passenger4);
         assertEquals(0, flight.getAvailableSeats());
     }
-
-    @Test
-    public void canGetCorrectNumberOfAvailableSeats(){
-        flight.addPassengers(passenger1);
-        assertEquals(2, flight.getAvailableSeats());
-    }
-
-//    public void can
 
 
 

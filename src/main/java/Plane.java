@@ -10,9 +10,12 @@ public class Plane {
         return planeType;
     }
 
-    public void setPlaneType(PlaneType planeType) {
-        this.planeType = planeType;
+    public int getPlaneCapacity() {
+        return this.planeType.getCapacity();
     }
 
+    public int getTotalWeight(){
+        return this.planeType.getCapacity();
+        }
 
 }
